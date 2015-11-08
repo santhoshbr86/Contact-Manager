@@ -1,0 +1,68 @@
+<div class="container allContacts">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+		  <h2 class="page-header text-center">List of contacts</h2>
+		  <p class="text-center">
+	      	  <a href="#/contacts/new" class="btn btn-lg btn-outline">Add Contact</a>
+	      </p>
+		</div>
+	</div>
+	<div class="row">
+	<ul class="contacts col-md-12 col-sm-12 col-xs-12">
+	<li class="col-md-4 col-sm-6 col-xs-12" ng-repeat="contact in contacts">
+	<div class="media">
+	  <div class="media-left">
+	    <a href="#">
+	      <img class="media-object" ng-src="images/faces/{{contact.id}}.jpg" alt="...">
+	    </a>
+	  </div>
+	  <div class="media-body">
+	    <h4 class="media-heading">{{contact.name}}
+	    	 <small>
+            <a href="#/contacts/new" ng-click="editContact(contact)"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="javascript:void(0)" ng-click="deleteContact($index)">
+              <span class="glyphicon glyphicon-trash"></span>
+            </a>
+          </small>
+	    </h4>
+	    <dl>
+          <dt>Phone Number:</dt>
+          <dd>{{contact.tel}}</dd>
+          <dt>Email:</dt>
+          <dd>{{contact.email}}</dd>
+        </dl>
+	  </div>
+	  <hr />
+	</div>
+	</li>
+	<!-- <ul class="media-list row contacts-container">
+	<li class="media col-md-10 col-sm-10 col-lg-4">
+      <div class="media-left media-middle">
+       <span class="thumbnail"> 
+       		<img class="media-object" src="images/faces/1.jpg">
+       </span>
+      </div>
+      <div class="media-body">
+      <div class="media-heading">
+        <h3>
+          Terrence S. Hatfield
+          <small>
+            <a href="#contacts/edit/1"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="#contacts/delete/1" class="delete-contract">
+              <span class="glyphicon glyphicon-trash"></span>
+            </a>
+          </small>
+        </h3>
+        <dl>
+          <dt>Phone Number:</dt>
+          <dd>651-603-1723</dd>
+          <dt>Email:</dt>
+          <dd>TerrenceSHatfield@rhyta.com</dd>
+        </dl>
+      </div>
+       </div>
+      <hr>
+    </li>
+    </ul> -->
+	</div>
+</div>

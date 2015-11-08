@@ -1,0 +1,22 @@
+.addContacts .contract-form .form-group {
+  margin-bottom: 18px;
+}
+.addContacts .contract-form .form-group .text-danger {
+  position: absolute;
+  top: -17px;
+  left: 29px;
+  font-size: 12px;
+}
+.addContacts .contract-form .form-group .control-label {
+  text-align: right;
+}
+.addContacts .contract-form .form-group .btn-outline {
+  color: #563d7c;
+  background-color: transparent;
+  border-color: #563d7c;
+}
+.addContacts .contract-form .form-group .btn-outline:hover {
+  color: #fff;
+  background-color: #563d7c;
+  border-color: #563d7c;
+}

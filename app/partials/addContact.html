@@ -1,0 +1,46 @@
+<div class="container addContacts">
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h2 class="page-header text-center">Create Contacts</h2>
+    </div>
+  </div>
+  <div class="row">
+    <form role="form" class="form-horizontal contract-form" name="addContact" novalidate>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Full name:</label>
+          <div class="col-sm-6">
+          <span class="text-danger" ng-show="addContact.name.$dirty&&addContact.name.$error.required">
+              Full name is required.
+            </span>
+            <input type="text" class="form-control" ng-model="contact.name" required name="name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Email address:</label>
+          <div class="col-sm-6">
+            <span class="text-danger" ng-show="addContact.emailaddress.$dirty&&addContact.emailaddress.$invalid">
+              Email address not valid.
+            </span>
+            <input type="email" class="form-control" ng-model="contact.email" name="emailaddress" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{1,}$/">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Telephone number:</label>
+          <div class="col-sm-6">
+          <span class="text-danger" ng-show="addContact.phone.$dirty&&addContact.phone.$error.maxlength">
+            Phone number can't be more than 10 digits.
+            </span>
+            <input type="tel" class="form-control contact-tel-input" name="phone" ng-model="contact.tel" ng-maxlength="10">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-3">
+            <button type="submit" class="btn btn-outline btn-lg btn-block" ng-click="addNew()">Submit</button>
+          </div>
+          <div class="col-sm-3">
+            <a href="#/contacts" class="btn btn-outline btn-lg btn-block">Cancel</a>
+          </div>
+        </div>
+      </form>
+      </div>
+</div>
