@@ -1,4 +1,5 @@
 (function(){
+	
 var  app = angular.module("contactManager", ['ngRoute', 'home', 'contactMod']);
 app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider){
 	$routeProvider.
